@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/forever stop -uid "dis"
+/usr/bin/forever stop --uid "dis"

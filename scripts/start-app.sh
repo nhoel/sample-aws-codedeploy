@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/forever start -uid "dis" ../app.js
+/usr/bin/forever start --uid "dis" ./bin/www
