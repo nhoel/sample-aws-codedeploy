@@ -10,13 +10,10 @@ permissions:
     group: ec2-user
 hooks:
   AfterInstall:
-    - location: npm install
-      timeout: 1200
-      runas: ec2-user
-    - location: npm install forever
+    - location: /scripts/install.sh
       timeout: 1200
       runas: ec2-user
   ApplicationStart:
-    - location: /node_modules/forever/bin/forever /app.js
-      timeout: 1200
+    - location: /scripts/start-app.sh
+      timeout: 300
       runas:  ec2-user
