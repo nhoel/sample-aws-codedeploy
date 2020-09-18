@@ -1,3 +1,3 @@
 #!/bin/bash
 
-forever start ../app.jss
+/usr/bin/forever start -uid "dis" ../app.js
