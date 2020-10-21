@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo 'Starting build.'
+  build:
+    commands:
+      - npm install
+  post_build:
+    commands:
+      - echo 'Build done.'
+artifacts:
+  discard-paths: no
+  files:
+    - package.json
+    - package-lock.json
+    - appsspec.yml
+    - app.js
+    - bin/**/*
+    - public/**/*
+    - routes/**/*
+    - scripts/**/*
+
