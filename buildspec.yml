@@ -21,4 +21,5 @@ artifacts:
     - public/**/*
     - routes/**/*
     - scripts/**/*
+    - node_modules/**/*
 
