@@ -1,9 +1,16 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - npm install json-cli
   pre_build:
     commands:
       - echo 'Starting build.'
+      - npm version patch
+      - npm push --tags origin master
   build:
     commands:
       - npm install
