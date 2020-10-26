@@ -7,4 +7,6 @@ PACKAGE_VERSION=$(cat package.json \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
 
-export PACKAGE_VERSION="v${PACKAGE_VERSION}"
+export vPACKAGE_VERSION="v${PACKAGE_VERSION}"
+echo  $PACKAGE_VERSION
+echo "Package Version ${vPACKAGE_VERSION}"
