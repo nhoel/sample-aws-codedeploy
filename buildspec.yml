@@ -9,10 +9,9 @@ phases:
       - echo 'Starting build.'
       - npm version patch
       - scripts/get-package-version.sh
-      - export PACKAGE_VERSION="v${version}"
+      - echo "$PACKAGE_VERSION"
       - git tag -a "${PACKAGE_VERSION}"
       - git push origin --tags
-      - echo "$PACKAGE_VERSION"
   build:
     commands:
       - npm install
