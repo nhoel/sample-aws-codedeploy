@@ -11,7 +11,7 @@ phases:
       - PACKAGE_VERSION=$(scripts/get-package-version.sh)
       - echo "$PACKAGE_VERSION"
       - git tag -a "${PACKAGE_VERSION}" -m  "Version ${PACKAGE_VERSION}"
-      - git push origin --tags
+#      - git push origin --tags
   build:
     commands:
       - npm install
@@ -20,6 +20,7 @@ phases:
       - echo 'Build done.'
 artifacts:
   discard-paths: no
+  name: "dis-${PACKAGE_VERSION}.zip"
   files:
     - package.json
     - package-lock.json
