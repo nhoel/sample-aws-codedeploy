@@ -4,11 +4,12 @@ phases:
   install:
     runtime-versions:
       nodejs: 12
+    commands:
+      - npm version patch
+      - PACKAGE_VERSION=scripts/get-package-version.sh
   pre_build:
     commands:
       - echo 'Starting build.'
-      - npm version patch
-      - PACKAGE_VERSION=scripts/get-package-version.sh
       - echo "$PACKAGE_VERSION"
       - git tag -a "${PACKAGE_VERSION}"
       - git push origin --tags
