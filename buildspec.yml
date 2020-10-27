@@ -11,7 +11,7 @@ phases:
     commands:
       - echo 'Starting build.'
       - echo "$PACKAGE_VERSION"
-      - git tag -a "${PACKAGE_VERSION}"
+      - git tag -a "${PACKAGE_VERSION}" -m  "Version ${PACKAGE_VERSION}"
       - git push origin --tags
   build:
     commands:
