@@ -6,7 +6,7 @@ phases:
       nodejs: 12
     commands:
       - npm version patch
-      - PACKAGE_VERSION=scripts/get-package-version.sh
+      - PACKAGE_VERSION=$(scripts/get-package-version.sh)
   pre_build:
     commands:
       - echo 'Starting build.'
